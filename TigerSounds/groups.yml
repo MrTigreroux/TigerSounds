@@ -1,0 +1,332 @@
+Groups:
+  Group1:
+    Name: '&aChauve-souris'
+    Icon: Material-Monster_egg:65
+    Sounds:
+    - Bat-death
+    - Bat-hurt
+    - Bat-idle
+    - Bat-loop
+    - Bat-takeoff
+  Group2:
+    Name: '&aBlaze'
+    Icon: Material-Monster_egg:61
+    Sounds:
+    - Blaze-breath
+    - Blaze-death
+    - Blaze-hit
+  Group3:
+    Name: '&aChat'
+    Icon: Material-Monster_egg:98
+    Sounds:
+    - Cat-hiss
+    - Cat-hit
+    - Cat-meow
+    - Cat-purr
+    - Cat-purreow
+  Group4:
+    Name: '&aPoulet'
+    Icon: Material-Egg
+    Sounds:
+    - Chicken-idle
+    - Chicken-hurt
+    - Chicken-egg-pop
+    - Chicken-walk
+  Group5:
+    Name: '&aVache'
+    Icon: Material-Monster_egg:92
+    Sounds:
+    - Cow-idle
+    - Cow-hurt
+    - Cow-walk
+  Group6:
+    Name: '&aCreeper'
+    Icon: Material-Monster_egg:50
+    Sounds:
+    - Creeper-hiss
+    - Creeper-death
+  Group7:
+    Name: '&aEnderdragon'
+    Icon: Material-Dragon_egg
+    Sounds:
+    - Enderdragon-death
+    - Enderdragon-growl
+    - Enderdragon-hit
+    - Enderdragon-wings
+  Group8:
+    Name: '&aEnderman'
+    Icon: Material-Monster_egg:58
+    Sounds:
+    - Enderman-death
+    - Enderman-hit
+    - Enderman-idle
+    - Enderman-teleport
+    - Enderman-scream
+    - Enderman-stare
+  Group9:
+    Name: '&aGhast'
+    Icon: Material-Monster_egg:56
+    Sounds:
+    - Ghast-scream
+    - Ghast-scream2
+    - Ghast-charge
+    - Ghast-death
+    - Ghast-fireball
+    - Ghast-moan
+  Group10:
+    Name: '&aIrongolem'
+    Icon: Material-IRON_BLOCK
+    Sounds:
+    - Irongolem-death
+    - Irongolem-hit
+    - Irongolem-throw
+    - Irongolem-walk
+  Group11:
+    Name: '&aChevaux'
+    Icon: Material-Monster_egg:100
+    Sounds:
+    - Horse-angry
+    - Horse-armor
+    - Horse-breathe
+    - Horse-death
+    - Horse-gallop
+    - Horse-hit
+    - Horse-idle
+    - Horse-jump
+    - Horse-land
+    - Horse-saddle
+    - Horse-soft
+    - Horse-wood
+    - Horse-skeleton-death
+    - Horse-skeleton-hit
+    - Horse-skeleton-idle
+    - Horse-zombie-death
+    - Horse-zombie-hit
+    - Horse-zombie-idle
+    - Donkey-angry
+    - Donkey-death
+    - Donkey-hit
+    - Donkey-idle
+  Group12:
+    Name: '&aGuardian'
+    Icon: Material-Monster_egg:68
+    Sounds: []
+  Group13:
+    Name: '&aMagmacube'
+    Icon: Material-Monster_egg:62
+    Sounds:
+    - Magmacube-walk
+    - Magmacube-walk2
+    - Magmacube-jump
+  Group14:
+    Name: '&aCochon'
+    Icon: Material-Monster_egg:90
+    Sounds:
+    - Pig-idle
+    - Pig-death
+    - Pig-walk
+  Group15:
+    Name: '&aMouton'
+    Icon: Material-Monster_egg:91
+    Sounds:
+    - Sheep-idle
+    - Sheep-shear
+    - Sheep-walk
+  Group16:
+    Name: '&aSilverfish'
+    Icon: Material-Monster_egg:60
+    Sounds:
+    - Silverfish-hit
+    - Silverfish-kill
+    - Silverfish-idle
+    - Silverfish-walk
+  Group17:
+    Name: '&aSquelette'
+    Icon: Material-Monster_egg:51
+    Sounds:
+    - Skeleton-idle
+    - Skeleton-death
+    - Skeleton-hurt
+    - Skeleton-walk
+  Group18:
+    Name: '&aSlime'
+    Icon: Material-Monster_egg:55
+    Sounds:
+    - Slime-attack
+    - Slime-walk
+    - Slime-walk2
+  Group19:
+    Name: "&aAraign\xe9e"
+    Icon: Material-Monster_egg:52
+    Sounds:
+    - Spider-idle
+    - Spider-death
+    - Spider-walk
+  Group20:
+    Name: '&aVillageois'
+    Icon: Material-Monster_egg:120
+    Sounds:
+    - Villager-death
+    - Villager-haggle
+    - Villager-hit
+    - Villager-idle
+    - Villager-yes
+    - Villager-no
+  Group21:
+    Name: '&aWither'
+    Icon: Material-SKULL_ITEM:1
+    Sounds:
+    - Wither-death
+    - Wither-hurt
+    - Wither-idle
+    - Wither-shoot
+    - Wither-spawn
+  Group22:
+    Name: '&aLoup'
+    Icon: Material-Monster_egg:95
+    Sounds:
+    - Wolf-bark
+    - Wolf-death
+    - Wolf-growl
+    - Wolf-howl
+    - Wolf-hurt
+    - Wolf-pant
+    - Wolf-shake
+    - Wolf-walk
+    - Wolf-whine
+  Group23:
+    Name: '&aZombie'
+    Icon: Material-Monster_egg:54
+    Sounds:
+    - Zombie-metal
+    - Zombie-wood
+    - Zombie-woodbreak
+    - Zombie-idle
+    - Zombie-death
+    - Zombie-hurt
+    - Zombie-infect
+    - Zombie-unfect
+    - Zombie-remedy
+    - Zombie-walk
+  Group24:
+    Name: '&aZombie pigman'
+    Icon: Material-Monster_egg:57
+    Sounds:
+    - Zombie-pig-idle
+    - Zombie-pig-angry
+    - Zombie-pig-death
+    - Zombie-pig-hurt
+  Group25:
+    Name: '&aNotes de musique'
+    Icon: Material-Jukebox
+    Sounds:
+    - Note-bass
+    - Note-piano
+    - Note-bass-drum
+    - Note-sticks
+    - Note-bass-guitar
+    - Note-snare-drum
+    - Note-pling
+  Group26:
+    Name: '&aPortail'
+    Icon: Material-OBSIDIAN
+    Sounds:
+    - Portal
+    - Portal-travel
+    - Portal-trigger
+  Group27:
+    Name: '&aDivers'
+    Icon: Skull:MHF_Chest
+    Sounds:
+    - Arrow-hit
+    - Item-break
+    - Item-pickup
+    - Burp
+    - Hurt-flesh
+    - Click
+    - Drink
+    - Eat
+    - Explode
+    - Fizz
+    - Level-up
+    - Orb-pickup
+  Group28:
+    Name: '&aPas'
+    Icon: Material-Leather_boots
+    Sounds:
+    - Step-grass
+    - Step-gravel
+    - Step-ladder
+    - Step-sand
+    - Step-snow
+    - Step-stone
+    - Step-wood
+    - Step-wool
+  Group29:
+    Name: '&aLiquides'
+    Icon: Material-BUCKET
+    Sounds:
+    - Water
+    - Lava
+    - Lava-pop
+    - Splash
+    - Splash2
+  Group30:
+    Name: '&aFeu d''artifice'
+    Icon: Material-Firework
+    Sounds:
+    - Firework-blast
+    - Firework-blast2
+    - Firework-large-blast
+    - Firework-large-blast2
+    - Firework-twinkle
+    - Firework-twinkle2
+    - Firework-launch
+  Group31:
+    Name: '&aFeu'
+    Icon: Material-Flint_and_steel
+    Sounds:
+    - Fire
+    - Fire-ignite
+  Group32:
+    Name: '&aWagon'
+    Icon: Material-Minecart
+    Sounds:
+    - Minecart-base
+    - Minecart-inside
+  Group33:
+    Name: '&aPiston'
+    Icon: Material-Piston_base
+    Sounds:
+    - Piston-extend
+    - Piston-retract
+  Group34:
+    Name: '&aMinage'
+    Icon: Material-Iron_spade
+    Sounds:
+    - Dig-grass
+    - Dig-gravel
+    - Dig-sand
+    - Dig-snow
+    - Dig-stone
+    - Dig-wood
+    - Dig-wool
+  Group35:
+    Name: '&aEnclume'
+    Icon: Material-Anvil
+    Sounds:
+    - Anvil-break
+    - Anvil-land
+    - Anvil-use
+  Group36:
+    Name: '&aCoffre'
+    Icon: Material-Chest
+    Sounds:
+    - Chest-open
+    - Chest-close
+  Group37:
+    Name: '&aPorte'
+    Icon: Material-Dark_oak_door_item
+    Sounds:
+    - Door-open
+    - Door-close

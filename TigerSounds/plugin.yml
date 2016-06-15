@@ -1,0 +1,24 @@
+name: TigerSounds
+version: 1.0
+description: Plugin de recensement de sons Minecraft.
+author: MrTigreroux
+main: fr.mrtigreroux.tigersounds.TigerSounds
+commands:
+  tigersounds:
+    description: Informations sur le plugin TigerSounds.
+  sounds:
+    description: Affichage ou gestion du menu des sons Minecraft.
+    aliases: [sound]
+permissions:
+  tigersounds.*:
+    description: Permet d'accéder a l'ensemble des commandes.
+    default: op
+    children:
+       tigersounds.manage: true
+       tigersounds.open: true
+  tigersounds.manage:
+    description: Permet de gérer le plugin.
+    children:
+       tigersounds.open: true
+  tigersounds.open:
+    description: Permet d'ouvrir le menu des sons.

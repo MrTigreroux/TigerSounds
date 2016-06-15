@@ -1,0 +1,306 @@
+Sounds:
+  Bat-death:
+    Icon: Material-Skull_item:0
+  Bat-hurt:
+    Icon: Material-Redstone
+  Bat-idle:
+    Icon: Material-Monster_egg:65
+  Bat-loop:
+    Icon: Material-Feather
+  Bat-takeoff:
+    Icon: Material-Slime_block
+  Blaze-death:
+    Icon: Material-Skull_item:0
+  Blaze-hit:
+    Icon: Material-Redstone
+  Cat-hiss:
+    Icon: Skull-MHF_Ocelot
+  Cat-hit:
+    Icon: Material-Redstone
+  Cat-meow:
+    Icon: Skull-MHF_Ocelot
+  Cat-purr:
+    Icon: Skull-MHF_Ocelot
+  Cat-purreow:
+    Icon: Skull-MHF_Ocelot
+  Chicken-hurt:
+    Icon: Material-Redstone
+  Chicken-egg-pop:
+    Icon: Material-Egg
+    Vanilla: mob.chicken.plop
+  Chicken-walk:
+    Icon: Material-Leather_boots
+  Cow-hurt:
+    Icon: Material-Redstone
+  Cow-walk:
+    Icon: Material-Leather_boots
+  Creeper-death:
+    Icon: Material-Skull_item:0
+  Enderdragon-death:
+    Icon: Material-Skull_item:0
+  Enderdragon-growl:
+    Icon: Material-Dragon_egg
+  Enderdragon-hit:
+    Icon: Material-Redstone
+  Enderdragon-wings:
+    Icon: Material-Feather
+  Enderman-death:
+    Icon: Material-Skull_item:0
+    Vanilla: mob.endermen.death
+  Enderman-hit:
+    Icon: Material-Redstone
+    Vanilla: mob.endermen.hit
+  Enderman-idle:
+    Vanilla: mob.endermen.idle
+  Enderman-teleport:
+    Icon: Material-Ender_pearl
+    Vanilla: mob.endermen.portal
+  Enderman-scream:
+    Vanilla: mob.endermen.scream
+  Enderman-stare:
+    Vanilla: mob.endermen.stare
+  Ghast-death:
+    Icon: Material-Skull_item:0
+  Ghast-fireball:
+    Icon: Material-Fireball
+  Irongolem-death:
+    Icon: Material-Skull_item:0
+  Irongolem-hit:
+    Icon: Material-Redstone
+  Irongolem-throw:
+    Icon: Material-Bow
+  Irongolem-walk:
+    Icon: Material-Leather_boots
+  Horse-angry:
+    Icon: Material-Monster_egg:100
+  Horse-armor:
+    Icon: Material-Iron_barding
+  Horse-breathe:
+    Icon: Material-Monster_egg:100
+  Horse-death:
+    Icon: Material-Skull_item:0
+  Horse-gallop:
+    Icon: Material-Leather_boots
+  Horse-hit:
+    Icon: Material-Redstone
+  Horse-idle:
+    Icon: Material-Monster_egg:100
+  Horse-land:
+    Icon: Material-Monster_egg:100
+  Horse-saddle:
+    Icon: Material-Saddle
+  Horse-soft:
+    Icon: Material-Monster_egg:100
+  Horse-wood:
+    Icon: Material-Monster_egg:100
+  Horse-jump:
+    Icon: Material-Slime_block
+  Horse-skeleton-death:
+    Icon: Material-Skull_item:0
+  Horse-skeleton-hit:
+    Icon: Material-Redstone
+  Horse-skeleton-idle:
+    Icon: Material-Bone
+  Horse-zombie-death:
+    Icon: Material-Skull_item:0
+  Horse-zombie-hit:
+    Icon: Material-Redstone
+  Horse-zombie-idle:
+    Icon: Material-Rotten_flesh
+  Donkey-angry:
+    Icon: Material-Storage_minecart
+  Donkey-death:
+    Icon: Material-Skull_item:0
+  Donkey-hit:
+    Icon: Material-Redstone
+  Donkey-idle:
+    Icon: Material-Storage_minecart
+  Magmacube-walk:
+    Icon: Material-Leather_boots
+  Magmacube-walk2:
+    Icon: Material-Leather_boots
+  Magmacube-jump:
+    Icon: Material-Slime_block
+  Pig-death:
+    Icon: Material-Skull_item:0
+  Pig-walk:
+    Icon: Material-Leather_boots
+  Sheep-shear:
+    Icon: Material-Shears
+  Sheep-walk:
+    Icon: Material-Leather_boots
+  Silverfish-hit:
+    Icon: Material-Redstone
+  Silverfish-kill:
+    Icon: Material-Skull_item:0
+  Silverfish-idle:
+    Icon: Material-Monster_egg:60
+  Silverfish-walk:
+    Icon: Material-Leather_boots
+  Skeleton-hurt:
+    Icon: Material-Redstone
+  Skeleton-death:
+    Icon: Material-Skull_item:0
+  Skeleton-idle:
+    Icon: Material-Skull_item:0
+  Skeleton-walk:
+    Icon: Material-Leather_boots
+  Slime-walk:
+    Icon: Material-Leather_boots
+  Slime-walk2:
+    Icon: Material-Leather_boots
+  Spider-death:
+    Icon: Material-Skull_item:0
+  Spider-walk:
+    Icon: Material-Leather_boots
+  Villager-death:
+    Icon: Material-Skull_item:0
+  Villager-hit:
+    Icon: Material-Redstone
+  Villager-yes:
+    Icon: Material-Stained_clay:5
+  Villager-no:
+    Icon: Material-Stained_clay:14
+  Wither-death:
+    Icon: Material-Skull_item:0
+  Wither-hurt:
+    Icon: Material-Redstone
+  Wither-shoot:
+    Icon: Material-Bow
+  Wolf-death:
+    Icon: Material-Skull_item:0
+  Wolf-hurt:
+    Icon: Material-Redstone
+  Wolf-walk:
+    Icon: Material-Leather_boots
+  Zombie-metal:
+    Icon: Material-Iron_block
+  Zombie-wood:
+    Icon: Material-Wood_door
+  Zombie-woodbreak:
+    Icon: Material-Iron_axe
+  Zombie-death:
+    Icon: Material-Skull_item:0
+  Zombie-hurt:
+    Icon: Material-Redstone
+  Zombie-walk:
+    Icon: Material-Leather_boots
+  Zombie-remedy:
+    Icon: Skull-MHF_Villager
+  Zombie-pig-angry:
+    Icon: Skull-MHF_PigZombie
+  Zombie-pig-idle:
+    Icon: Skull-MHF_PigZombie
+  Zombie-pig-death:
+    Icon: Material-Skull_item:0
+  Zombie-pig-hurt:
+    Icon: Material-Redstone
+  Portal:
+    Icon: Material-Stained_glass_pane:10
+  Portal-travel:
+    Icon: Material-Ender_pearl
+  Portal-trigger:
+    Icon: Material-Leather_boots
+  Arrow-hit:
+    Icon: Material-Arrow
+  Item-break:
+    Icon: Material-Iron_pickaxe:250
+  Item-pickup:
+    Icon: Material-Stained_clay:9
+  Burp:
+    Icon: Material-Cooked_beef
+  Hurt-flesh:
+    Icon: Material-Redstone
+    Vanilla: game.hostile.hurt
+  Drink:
+    Icon: Material-Potion
+  Eat:
+    Icon: Material-Baked_potato
+  Explode:
+    Icon: Material-TNT
+  Fizz:
+    Icon: Material-Obsidian
+  Level-up:
+    Icon: Material-Enchantment_table
+  Orb-pickup:
+    Icon: Material-Exp_bottle
+  Step-grass:
+    Icon: Material-Grass
+  Step-gravel:
+    Icon: Material-Gravel
+  Step-ladder:
+    Icon: Material-Ladder
+  Step-sand:
+    Icon: Material-Sand
+  Step-snow:
+    Icon: Material-Snow_block
+  Step-stone:
+    Icon: Material-Stone
+  Step-wood:
+    Icon: Material-Wood
+  Step-wool:
+    Icon: Material-Wool
+  Water:
+    Icon: Material-Water_bucket
+  Lava:
+    Icon: Material-Lava_bucket
+  Lava-pop:
+    Icon: Material-Lava_bucket
+  Splash:
+    Icon: Material-Cauldron_item
+  Splash2:
+    Icon: Material-Water_bucket
+  Firework-blast:
+    Icon: Material-Firework
+  Firework-blast2:
+    Icon: Material-Firework
+  Firework-large-blast:
+    Icon: Material-Fireball
+  Firework-large-blast2:
+    Icon: Material-Fireball
+  Firework-twinkle:
+    Icon: Material-Glowstone_dust
+  Firework-twinkle2:
+    Icon: Material-Glowstone_dust
+  Firework-launch:
+    Icon: Material-Firework
+  Fire:
+    Icon: Material-Flint_and_steel
+  Fire-ignite:
+    Icon: Material-Flint_and_steel
+  Minecart-base:
+    Icon: Material-Rails
+  Minecart-inside:
+    Icon: Material-Minecart
+  Piston-extend:
+    Icon: Material-Stained_clay:5
+  Piston-retract:
+    Icon: Material-Stained_clay:14
+  Dig-grass:
+    Icon: Material-Grass
+  Dig-gravel:
+    Icon: Material-Gravel
+  Dig-sand:
+    Icon: Material-Sand
+  Dig-snow:
+    Icon: Material-Snow_block
+  Dig-stone:
+    Icon: Material-Stone
+  Dig-wood:
+    Icon: Material-Wood
+  Dig-wool:
+    Icon: Material-Wool
+  Anvil-break:
+    Icon: Material-Anvil:2
+  Anvil-land:
+    Icon: Material-Feather
+  Anvil-use:
+    Icon: Material-Anvil:1
+  Chest-open:
+    Icon: Material-Stained_clay:5
+  Chest-close:
+    Icon: Material-Stained_clay:14
+  Door-open:
+    Icon: Material-Stained_clay:5
+  Door-close:
+    Icon: Material-Stained_clay:14
