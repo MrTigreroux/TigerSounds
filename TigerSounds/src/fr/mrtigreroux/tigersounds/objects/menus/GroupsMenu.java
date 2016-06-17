@@ -1,6 +1,5 @@
 package fr.mrtigreroux.tigersounds.objects.menus;
 
-import org.bukkit.Sound;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -8,6 +7,7 @@ import org.bukkit.inventory.ItemStack;
 import fr.mrtigreroux.tigersounds.data.MenuItem;
 import fr.mrtigreroux.tigersounds.data.Message;
 import fr.mrtigreroux.tigersounds.objects.User;
+import fr.mrtigreroux.tigersounds.utils.ConfigUtils;
 import fr.mrtigreroux.tigersounds.utils.GroupUtils;
 
 /**
@@ -37,7 +37,7 @@ public class GroupsMenu extends Menu {
 		
 		if(firstGroup+26 < totalGroups) inv.setItem(size-3, MenuItem.PAGE_SWITCH_NEXT.get());
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 	}
 
 	@Override

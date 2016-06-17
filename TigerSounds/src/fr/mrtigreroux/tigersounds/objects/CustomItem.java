@@ -5,12 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+
+import fr.mrtigreroux.tigersounds.data.MonsterId;
+import fr.mrtigreroux.tigersounds.utils.ReflectionUtils;
 
 /**
  * @author MrTigreroux
@@ -117,6 +121,20 @@ public class CustomItem {
 
 	public ItemStack create() {
 		ItemStack item = new ItemStack(getMaterial(), getAmount().intValue(), getDamage());
+		if(getMaterial() == Material.MONSTER_EGG && ReflectionUtils.ver().startsWith("v1_9")) {
+			try {
+				Object nmsStack = ReflectionUtils.getCBClass("inventory.CraftItemStack").getMethod("asNMSCopy", ItemStack.class).invoke(null, item);
+				Object tag = (Boolean)nmsStack.getClass().getMethod("hasTag").invoke(nmsStack) ? nmsStack.getClass().getMethod("getTag").invoke(nmsStack) : ReflectionUtils.getNMSClass("NBTTagCompound").newInstance();
+				Object nested = ReflectionUtils.getNMSClass("NBTTagCompound").newInstance();
+				nested.getClass().getMethod("setString", String.class, String.class).invoke(nested, "id", MonsterId.getMonster(getDamage()));
+				tag.getClass().getMethod("set", String.class, ReflectionUtils.getNMSClass("NBTBase")).invoke(tag, "EntityTag", nested);
+				nmsStack.getClass().getMethod("setTag", ReflectionUtils.getNMSClass("NBTTagCompound")).invoke(nmsStack, tag);
+				item = (ItemStack) ReflectionUtils.getCBClass("inventory.CraftItemStack").getMethod("asBukkitCopy", ReflectionUtils.getNMSClass("ItemStack")).invoke(null, nmsStack);
+			} catch (Exception Error) {
+				Bukkit.getLogger().severe("############# TIGERSOUNDS ERROR ####################");
+				Error.printStackTrace();
+			}
+		}
 		if(skullOwner != null) {
 			SkullMeta skullM = (SkullMeta) item.getItemMeta();
 			skullM.setOwner(skullOwner);

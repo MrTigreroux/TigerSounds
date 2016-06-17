@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 
@@ -99,31 +100,37 @@ public class User {
 
 	@SuppressWarnings("deprecation")
 	public void editSetting(String setting) {
-		Location loc = p.getLocation();
-		World world = loc.getWorld();
-		Block b = world.getBlockAt(loc.getBlockX(), world.getMaxHeight()-1, loc.getBlockZ());
-		UserData.SignMaterial.put(uuid, b.getType());
-		UserData.SignData.put(uuid, b.getData());
-		
-		b.setType(Material.SIGN_POST);
-		Sign s = (Sign) b.getState();
-		if(!(s instanceof Sign)) return;
-		s.setLine(0, "§7[§6TigerSounds§7]");
-		s.setLine(1, "§e"+p.getName());
-		s.setLine(2, "§8change un");
-		s.setLine(3, "§8paramètre");
-		s.update();
-		
-		UserData.SettingModified.put(uuid, setting);
-		Object tileEntity = ReflectionUtils.getDeclaredField(s,  "sign");
-		ReflectionUtils.setDeclaredField(tileEntity, "isEditable", true);
-		ReflectionUtils.setDeclaredField(tileEntity, "h", ReflectionUtils.getHandle(p));
-		ReflectionUtils.sendPacket(p,  ReflectionUtils.getPacket("PacketPlayOutOpenSignEditor", ReflectionUtils.callDeclaredConstructor(ReflectionUtils.getNMSClass("BlockPosition"), s.getX(), s.getY(), s.getZ())));
+		try {
+			Location loc = p.getLocation();
+			World world = loc.getWorld();
+			Block b = world.getBlockAt(loc.getBlockX(), world.getMaxHeight()-1, loc.getBlockZ());
+			UserData.SignMaterial.put(uuid, b.getType());
+			UserData.SignData.put(uuid, b.getData());
+			
+			Block support = b.getRelative(BlockFace.DOWN);
+			if(support.getType() == Material.AIR) support.setType(Material.BEDROCK);
+			b.setType(Material.SIGN_POST);
+			Sign s = (Sign) b.getState();
+			if(!(s instanceof Sign)) return;
+			s.setLine(0, "§7[§6TigerSounds§7]");
+			s.setLine(1, "§e"+p.getName());
+			s.setLine(2, "§8change un");
+			s.setLine(3, "§8paramètre");
+			s.update();
+			
+			UserData.SettingModified.put(uuid, setting);
+			Object tileEntity = ReflectionUtils.getDeclaredField(s,  "sign");
+			ReflectionUtils.setDeclaredField(tileEntity, "isEditable", true);
+			ReflectionUtils.setDeclaredField(tileEntity, "h", ReflectionUtils.getHandle(p));
+			ReflectionUtils.sendPacket(p,  ReflectionUtils.getPacket("PacketPlayOutOpenSignEditor", ReflectionUtils.callDeclaredConstructor(ReflectionUtils.getNMSClass("BlockPosition"), s.getX(), s.getY(), s.getZ())));
+		} catch (Exception Error) {}
 	}
 	
 	@SuppressWarnings("deprecation")
 	public void updateSignBlock(Block b) {
 		b.setType(UserData.SignMaterial.containsKey(uuid) ? UserData.SignMaterial.get(uuid) : Material.AIR);
+		Block support = b.getRelative(BlockFace.DOWN);
+		if(support.getType() == Material.BEDROCK) support.setType(Material.AIR);
 		if(UserData.SignData.containsKey(uuid)) b.setData(UserData.SignData.get(uuid));
 		UserData.SignMaterial.remove(uuid);
 		UserData.SignData.remove(uuid);

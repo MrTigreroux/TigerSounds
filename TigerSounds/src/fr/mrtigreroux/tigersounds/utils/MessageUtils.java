@@ -2,7 +2,6 @@ package fr.mrtigreroux.tigersounds.utils;
 
 import java.util.List;
 
-import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -18,7 +17,7 @@ public class MessageUtils {
 		s.sendMessage(message);
 		if(!(s instanceof Player)) return;
 		Player p = (Player) s;
-		p.playSound(p.getLocation(), Sound.ITEM_BREAK, 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 	}
 
 	public static String cleanDouble(Double number) {

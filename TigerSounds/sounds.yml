@@ -115,6 +115,22 @@ Sounds:
     Icon: Material-Redstone
   Donkey-idle:
     Icon: Material-Storage_minecart
+  Entity-guardian-ambient:
+    Icon: Material-Monster_egg:68
+  Entity-guardian-ambient-land:
+    Icon: Material-Monster_egg:68
+  Entity-guardian-attack:
+    Icon: Material-Monster_egg:68
+  Entity-guardian-death:
+    Icon: Material-Skull_item:0
+  Entity-guardian-death-land:
+    Icon: Material-Skull_item:0
+  Entity-guardian-flop:
+    Icon: Material-Slimeblock
+  Entity-guardian-hurt:
+    Icon: Material-Redstone
+  Entity-guardian-hurt-land:
+    Icon: Material-Redstone
   Magmacube-walk:
     Icon: Material-Leather_boots
   Magmacube-walk2:

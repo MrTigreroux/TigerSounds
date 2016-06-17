@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 
 import fr.mrtigreroux.tigersounds.managers.FilesManager;
@@ -58,6 +59,17 @@ public class ConfigUtils {
 
 	public static String getDefaultSkull(String type) {
 		return getSkull(FilesManager.getConfig, "Config.Default"+type+"Icon");
+	}
+	
+	public static Sound getSoundMenu() {
+		String path = "Config.SoundMenu";
+		String configSound = FilesManager.getConfig.getString(path) != null ? FilesManager.getConfig.getString(path).toUpperCase() : "";
+		for(String sound : Arrays.asList(configSound, "ITEM_PICKUP", "ENTITY_ITEM_PICKUP")) {
+			try {
+				return Sound.valueOf(sound);
+			} catch (Exception InvalidSound) {}
+		}
+		return null;
 	}
 	
 }

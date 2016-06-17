@@ -8,7 +8,6 @@ import net.md_5.bungee.api.chat.TextComponent;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
@@ -18,6 +17,7 @@ import fr.mrtigreroux.tigersounds.data.MenuItem;
 import fr.mrtigreroux.tigersounds.data.Message;
 import fr.mrtigreroux.tigersounds.objects.CustomItem;
 import fr.mrtigreroux.tigersounds.objects.User;
+import fr.mrtigreroux.tigersounds.utils.ConfigUtils;
 import fr.mrtigreroux.tigersounds.utils.SoundUtils;
 
 /**
@@ -53,7 +53,7 @@ public abstract class  Menu {
 		if(slot == -1 || item == null || item.getType() == Material.AIR || (item.getType() == Material.STAINED_GLASS_PANE && ((slot >= size-9 && slot <= size-1) || (slot >= 9 && slot <= 17)))) return;
 		if(slot == size-5 && item.isSimilar(MenuItem.CLOSE.get())) {
 			u.closeMenu(true);
-			p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+			p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 			return;
 		}
 		
@@ -61,7 +61,7 @@ public abstract class  Menu {
 		int newPage = slot == size-7 && item.isSimilar(MenuItem.PAGE_SWITCH_PREVIOUS.get()) ? page-1 : slot == size-3 && item.isSimilar(MenuItem.PAGE_SWITCH_NEXT.get()) ? page+1 : -1;
 		if(newPage != -1) {
 			u.openMenu(u.getOpenedMenu(), newPage, u.getOpenedGroup(), u.getOpenedSound(), true, u.getConfirmAction());
-			p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+			p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 			return;
 		}
 		onClick(item, slot, click);
