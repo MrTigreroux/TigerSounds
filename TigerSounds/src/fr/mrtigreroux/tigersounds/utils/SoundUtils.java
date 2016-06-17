@@ -31,9 +31,9 @@ public class SoundUtils {
 		Sound bukkitSound = ConfigUtils.getSoundMenu();
 		String configSound = FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit") != null ? FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit").toUpperCase() : "";
 		String bukkitName = configName.toUpperCase().replaceAll("-", "_");
-		if(ReflectionUtils.ver().startsWith("v1_9")) {
-			configSound = configSound.replaceAll("IDLE", "AMBIENT");
-			bukkitName = bukkitName.replaceAll("IDLE", "AMBIENT");
+		if(!ReflectionUtils.ver().startsWith("v1_8")) {
+			configSound = configSound.replaceAll("IDLE", "AMBIENT").replaceAll("DOOR", "WOODEN_DOOR");
+			bukkitName = bukkitName.replaceAll("IDLE", "AMBIENT").replaceAll("DOOR", "WOODEN_DOOR");
 		}
 		for(String sound : Arrays.asList(configSound, bukkitName, "ENTITY_"+bukkitName, "BLOCK_"+bukkitName, "ITEM_"+bukkitName, "MUSIC_"+bukkitName)) {
 			try {
