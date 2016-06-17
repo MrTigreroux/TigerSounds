@@ -62,8 +62,8 @@ public class AdvancedMenu extends Menu {
 		else if(slot == 2 || slot == 6) {
 			soundNumber += slot == 2  ? -1 : 1;
 			int totalSounds = soundsList.size();
-			if(soundNumber > totalSounds) soundNumber = 1;
-			if(soundNumber < 1) soundNumber = totalSounds;
+			if(soundNumber >= totalSounds) soundNumber = 1;
+			if(soundNumber < 1) soundNumber = totalSounds-1;
 			u.openAdvancedMenu(groupNumber, soundsList.get(soundNumber), true);
 		}
 		else if(slot >= 18 && slot <= size-9) {
