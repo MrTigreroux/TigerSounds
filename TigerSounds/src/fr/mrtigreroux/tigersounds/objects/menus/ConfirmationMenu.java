@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -39,7 +38,7 @@ public class ConfirmationMenu extends Menu {
 		inv.setItem(15, new CustomItem().type(Material.STAINED_CLAY).damage((byte) 14).name(Message.CANCEL_SUPPRESSION.get()).lore(Message.CANCEL_SUPPRESION_DETAILS.get().split(ConfigUtils.getLineBreakSymbol())).create());
 		
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 	}
 
 	@Override

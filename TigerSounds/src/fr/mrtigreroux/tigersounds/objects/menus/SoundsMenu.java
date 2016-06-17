@@ -2,7 +2,6 @@ package fr.mrtigreroux.tigersounds.objects.menus;
 
 import java.util.List;
 
-import org.bukkit.Sound;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -10,6 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import fr.mrtigreroux.tigersounds.data.MenuItem;
 import fr.mrtigreroux.tigersounds.data.Message;
 import fr.mrtigreroux.tigersounds.objects.User;
+import fr.mrtigreroux.tigersounds.utils.ConfigUtils;
 import fr.mrtigreroux.tigersounds.utils.GroupUtils;
 import fr.mrtigreroux.tigersounds.utils.SoundUtils;
 
@@ -48,7 +48,7 @@ public class SoundsMenu extends Menu {
 		if(modified) GroupUtils.setSoundsList(groupNumber, soundsList);
 		if(firstSound+27 < totalSounds) inv.setItem(size-3, MenuItem.PAGE_SWITCH_NEXT.get());
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 	}
 
 	@Override

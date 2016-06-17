@@ -2,7 +2,6 @@ package fr.mrtigreroux.tigersounds.objects.menus;
 
 import java.util.List;
 
-import org.bukkit.Sound;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -11,6 +10,7 @@ import fr.mrtigreroux.tigersounds.data.MenuItem;
 import fr.mrtigreroux.tigersounds.data.Message;
 import fr.mrtigreroux.tigersounds.managers.FilesManager;
 import fr.mrtigreroux.tigersounds.objects.User;
+import fr.mrtigreroux.tigersounds.utils.ConfigUtils;
 import fr.mrtigreroux.tigersounds.utils.GroupUtils;
 import fr.mrtigreroux.tigersounds.utils.MessageUtils;
 import fr.mrtigreroux.tigersounds.utils.SoundUtils;
@@ -27,7 +27,6 @@ public class AdvancedMenu extends Menu {
 	
 	public void open(int groupNumber, String configName, boolean sound) {
 		Inventory inv = getInventory(Message.ADVANCED_TITLE.get().replaceAll("_Sound_", configName.replaceAll("-", " ")), true);
-		
 		inv.setItem(0, GroupUtils.getItem(groupNumber));
 		inv.setItem(4, SoundUtils.getItem(configName));
 		if(GroupUtils.getTotalSounds(groupNumber) != 1) {
@@ -48,7 +47,7 @@ public class AdvancedMenu extends Menu {
 		}
 		
 		p.openInventory(inv);
-		if(sound) p.playSound(p.getLocation(), Sound.ITEM_PICKUP, 1, 1);
+		if(sound) p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
 	}
 
 	@Override

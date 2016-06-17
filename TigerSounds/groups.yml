@@ -110,7 +110,15 @@ Groups:
   Group12:
     Name: '&aGuardian'
     Icon: Material-Monster_egg:68
-    Sounds: []
+    Sounds:
+    - Entity-guardian-ambient
+    - Entity-guardian-ambient-land
+    - Entity-guardian-attack
+    - Entity-guardian-death
+    - Entity-guardian-death-land
+    - Entity-guardian-flop
+    - Entity-guardian-hurt
+    - Entity-guardian-hurt-land
   Group13:
     Name: '&aMagmacube'
     Icon: Material-Monster_egg:62

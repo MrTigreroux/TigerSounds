@@ -1,6 +1,7 @@
 package fr.mrtigreroux.tigersounds.utils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.bukkit.ChatColor;
@@ -27,16 +28,19 @@ public class SoundUtils {
 	}
 	
 	public static Sound getSound(String configName) {
-		Sound sound = Sound.ITEM_BREAK;
-		try {
-			String path = getConfigPath(configName)+".Bukkit";
-			sound = Sound.valueOf(FilesManager.getSounds.getString(path));
-		} catch(Exception invalidConfig) {
-			try {
-				sound = Sound.valueOf(configName.toUpperCase().replaceAll("-", "_"));
-			} catch(Exception invalidName) {}
+		Sound bukkitSound = ConfigUtils.getSoundMenu();
+		String configSound = FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit") != null ? FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit").toUpperCase() : "";
+		String bukkitName = configName.toUpperCase().replaceAll("-", "_");
+		if(ReflectionUtils.ver().startsWith("v1_9")) {
+			configSound = configSound.replaceAll("IDLE", "AMBIENT");
+			bukkitName = bukkitName.replaceAll("IDLE", "AMBIENT");
 		}
-		return sound;
+		for(String sound : Arrays.asList(configSound, bukkitName, "ENTITY_"+bukkitName, "BLOCK_"+bukkitName, "ITEM_"+bukkitName, "MUSIC_"+bukkitName)) {
+			try {
+				bukkitSound = Sound.valueOf(sound); break;
+			} catch (Exception InvalidSound) {}
+		}
+		return bukkitSound;
 	}
 
 	public static String getCustomName(String configName) {
@@ -55,7 +59,7 @@ public class SoundUtils {
 	
 	public static String getBukkitName(String configName) {
 		Sound sound = getSound(configName);
-		return sound != null ? sound.toString() : Message.NONE_BUKKITNAME.get();
+		return sound != ConfigUtils.getSoundMenu() ? sound.toString() : Message.NONE_BUKKITNAME.get();
 	}
 	
 	public static String getDescription(String configName) {

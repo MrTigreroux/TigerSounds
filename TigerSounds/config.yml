@@ -1,5 +1,5 @@
 TigerSounds:
-  Version: 1.8 spigot
+  Version: 1.8 & 1.9 spigot
   Creator: MrTigreroux
   Description: Plugin de recensement des sons Minecraft.
   Finished on: 15/06/2016
@@ -10,3 +10,4 @@ Config:
   DefaultGroupIcon: Skull-MHF_Chest
   ColorCharacter: '&'
   LineBreakSymbol: "//"
+  SoundMenu: ENTITY_ITEM_PICKUP
