@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
@@ -121,7 +120,7 @@ public class CustomItem {
 
 	public ItemStack create() {
 		ItemStack item = new ItemStack(getMaterial(), getAmount().intValue(), getDamage());
-		if(getMaterial() == Material.MONSTER_EGG && ReflectionUtils.ver().startsWith("v1_9")) {
+		if(getMaterial() == Material.MONSTER_EGG && !ReflectionUtils.ver().startsWith("v1_8")) {
 			try {
 				Object nmsStack = ReflectionUtils.getCBClass("inventory.CraftItemStack").getMethod("asNMSCopy", ItemStack.class).invoke(null, item);
 				Object tag = (Boolean)nmsStack.getClass().getMethod("hasTag").invoke(nmsStack) ? nmsStack.getClass().getMethod("getTag").invoke(nmsStack) : ReflectionUtils.getNMSClass("NBTTagCompound").newInstance();
@@ -130,10 +129,7 @@ public class CustomItem {
 				tag.getClass().getMethod("set", String.class, ReflectionUtils.getNMSClass("NBTBase")).invoke(tag, "EntityTag", nested);
 				nmsStack.getClass().getMethod("setTag", ReflectionUtils.getNMSClass("NBTTagCompound")).invoke(nmsStack, tag);
 				item = (ItemStack) ReflectionUtils.getCBClass("inventory.CraftItemStack").getMethod("asBukkitCopy", ReflectionUtils.getNMSClass("ItemStack")).invoke(null, nmsStack);
-			} catch (Exception Error) {
-				Bukkit.getLogger().severe("############# TIGERSOUNDS ERROR ####################");
-				Error.printStackTrace();
-			}
+			} catch (Exception Error) {}
 		}
 		if(skullOwner != null) {
 			SkullMeta skullM = (SkullMeta) item.getItemMeta();
