@@ -37,7 +37,7 @@ public class GroupsMenu extends Menu {
 		
 		if(firstGroup+26 < totalGroups) inv.setItem(size-3, MenuItem.PAGE_SWITCH_NEXT.get());
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getMenuSound(), 1, 1);
 	}
 
 	@Override

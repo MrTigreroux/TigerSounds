@@ -38,7 +38,7 @@ public class ConfirmationMenu extends Menu {
 		inv.setItem(15, new CustomItem().type(Material.STAINED_CLAY).damage((byte) 14).name(Message.CANCEL_SUPPRESSION.get()).lore(Message.CANCEL_SUPPRESION_DETAILS.get().split(ConfigUtils.getLineBreakSymbol())).create());
 		
 		p.openInventory(inv);
-		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getMenuSound(), 1, 1);
 	}
 
 	@Override

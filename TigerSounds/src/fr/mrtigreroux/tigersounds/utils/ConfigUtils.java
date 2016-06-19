@@ -61,15 +61,23 @@ public class ConfigUtils {
 		return getSkull(FilesManager.getConfig, "Config.Default"+type+"Icon");
 	}
 	
-	public static Sound getSoundMenu() {
-		String path = "Config.SoundMenu";
+	public static Sound getSound(String type, String default1, String default2) {
+		String path = "Config."+type;
 		String configSound = FilesManager.getConfig.getString(path) != null ? FilesManager.getConfig.getString(path).toUpperCase() : "";
-		for(String sound : Arrays.asList(configSound, "ITEM_PICKUP", "ENTITY_ITEM_PICKUP")) {
+		for(String sound : Arrays.asList(configSound, default1, default2)) {
 			try {
 				return Sound.valueOf(sound);
 			} catch (Exception InvalidSound) {}
 		}
 		return null;
+	}
+	
+	public static Sound getMenuSound() {
+		return getSound("MenuSound", "ITEM_PICKUP", "ENTITY_ITEM_PICKUP");
+	}
+
+	public static Sound getErrorSound() {
+		return getSound("ErrorSound", "ITEM_BREAK", "ENTITY_ITEM_BREAK");
 	}
 	
 }

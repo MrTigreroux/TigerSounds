@@ -19,6 +19,7 @@ import fr.mrtigreroux.tigersounds.objects.CustomItem;
  */
 
 public class SoundUtils {
+	
 	public static String getConfigName(Sound sound) {
 		return sound.toString().substring(0, 1)+sound.toString().substring(1).replaceAll("_", "-").toLowerCase();
 	}
@@ -28,7 +29,7 @@ public class SoundUtils {
 	}
 	
 	public static Sound getSound(String configName) {
-		Sound bukkitSound = ConfigUtils.getSoundMenu();
+		Sound bukkitSound = ConfigUtils.getMenuSound();
 		String configSound = FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit") != null ? FilesManager.getSounds.getString(getConfigPath(configName)+".Bukkit").toUpperCase() : "";
 		String bukkitName = configName.toUpperCase().replaceAll("-", "_");
 		if(!ReflectionUtils.ver().startsWith("v1_8")) {
@@ -59,7 +60,7 @@ public class SoundUtils {
 	
 	public static String getBukkitName(String configName) {
 		Sound sound = getSound(configName);
-		return sound != ConfigUtils.getSoundMenu() ? sound.toString() : Message.NONE_BUKKITNAME.get();
+		return sound != ConfigUtils.getMenuSound() ? sound.toString() : Message.NONE_BUKKITNAME.get();
 	}
 	
 	public static String getDescription(String configName) {

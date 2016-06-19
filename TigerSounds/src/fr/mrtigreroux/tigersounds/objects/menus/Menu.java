@@ -53,7 +53,7 @@ public abstract class  Menu {
 		if(slot == -1 || item == null || item.getType() == Material.AIR || (item.getType() == Material.STAINED_GLASS_PANE && ((slot >= size-9 && slot <= size-1) || (slot >= 9 && slot <= 17)))) return;
 		if(slot == size-5 && item.isSimilar(MenuItem.CLOSE.get())) {
 			u.closeMenu(true);
-			p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+			p.playSound(p.getLocation(), ConfigUtils.getMenuSound(), 1, 1);
 			return;
 		}
 		
@@ -61,7 +61,7 @@ public abstract class  Menu {
 		int newPage = slot == size-7 && item.isSimilar(MenuItem.PAGE_SWITCH_PREVIOUS.get()) ? page-1 : slot == size-3 && item.isSimilar(MenuItem.PAGE_SWITCH_NEXT.get()) ? page+1 : -1;
 		if(newPage != -1) {
 			u.openMenu(u.getOpenedMenu(), newPage, u.getOpenedGroup(), u.getOpenedSound(), true, u.getConfirmAction());
-			p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+			p.playSound(p.getLocation(), ConfigUtils.getMenuSound(), 1, 1);
 			return;
 		}
 		onClick(item, slot, click);
@@ -75,7 +75,7 @@ public abstract class  Menu {
 			case MIDDLE: u.openAdvancedMenu(groupNumber, configName, true); return;
 			case RIGHT: case SHIFT_RIGHT:
 				String vanillaName = SoundUtils.getVanillaName(configName);
-				TextComponent playSound = new TextComponent(ChatColor.translateAlternateColorCodes('&', Message.PLAYSOUND.get().replaceAll("_Sound_", SoundUtils.getCustomName(configName))));
+				TextComponent playSound = new TextComponent(ChatColor.translateAlternateColorCodes(ConfigUtils.getColorCharacter(), Message.PLAYSOUND.get().replaceAll("_Sound_", SoundUtils.getCustomName(configName))));
 				playSound.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/playsound "+vanillaName+" @p \u007E"+SoundUtils.getDistance(configName)+" \u007E \u007E "+SoundUtils.getVolume(configName)+" "+SoundUtils.getPitch(configName)));
 				playSound.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(Message.PLAYSOUND_DETAILS.get().replaceAll("_Sound_", vanillaName)).create()));
 				p.spigot().sendMessage(playSound);
