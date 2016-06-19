@@ -47,7 +47,7 @@ public class AdvancedMenu extends Menu {
 		}
 		
 		p.openInventory(inv);
-		if(sound) p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+		if(sound) p.playSound(p.getLocation(), ConfigUtils.getMenuSound(), 1, 1);
 	}
 
 	@Override

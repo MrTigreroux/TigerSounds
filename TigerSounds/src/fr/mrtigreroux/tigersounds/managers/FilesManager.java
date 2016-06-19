@@ -40,7 +40,7 @@ public class FilesManager {
 			fileConfig.load(file);
 		} catch (Exception error) {}
 		Bukkit.getLogger().log(Level.WARNING, "---------------------------------------------------------------");
-		Bukkit.getLogger().log(Level.WARNING, "TigerSounds > Le fichier "+file.getName()+" a été réinitialisé.");
+		Bukkit.getLogger().log(Level.WARNING, "TigerSounds > Le fichier "+file.getName()+" a ete reinitialise.");
 		Bukkit.getLogger().log(Level.WARNING, "---------------------------------------------------------------");
 	}
 

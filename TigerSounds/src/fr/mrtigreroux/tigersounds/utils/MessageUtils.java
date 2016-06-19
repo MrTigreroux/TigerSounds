@@ -17,7 +17,7 @@ public class MessageUtils {
 		s.sendMessage(message);
 		if(!(s instanceof Player)) return;
 		Player p = (Player) s;
-		p.playSound(p.getLocation(), ConfigUtils.getSoundMenu(), 1, 1);
+		p.playSound(p.getLocation(), ConfigUtils.getErrorSound(), 1, 1);
 	}
 
 	public static String cleanDouble(Double number) {

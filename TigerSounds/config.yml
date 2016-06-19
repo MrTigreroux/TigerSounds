@@ -10,4 +10,5 @@ Config:
   DefaultGroupIcon: Skull-MHF_Chest
   ColorCharacter: '&'
   LineBreakSymbol: "//"
-  SoundMenu: ENTITY_ITEM_PICKUP
+  MenuSound: ENTITY_ITEM_PICKUP
+  ErrorSound: ENTITY_ITEM_BREAK
